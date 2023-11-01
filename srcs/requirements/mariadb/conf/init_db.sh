@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Création du répertoire pour le socket mysqld si nécessaire
+#mkdir -p /run/mysqld/
+#chown mysql:mysql /run/mysqld/
+
 # Démarrage de MySQL
 service mysql start;
 
