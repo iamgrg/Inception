@@ -1,8 +1,8 @@
 all:
-	mkdir -p /home/gansard/data/mariadb
-	mkdir -p /home/gansard/data/wordpress
+	sudo mkdir -p /home/gansard/data/mariadb
+	sudo mkdir -p /home/gansard/data/wordpress
 	docker-compose -f ./srcs/docker-compose.yml build
-	docker-compose -f ./srcs/docker-compose.yml up -d
+	docker-compose -f ./srcs/docker-compose.yml --env-file srcs/.env up -d
 
 logs:
 	docker logs wordpress
@@ -14,10 +14,9 @@ clean:
 	docker network rm inception
 
 fclean: clean
-	@sudo rm -rf /home/gansard/data/mariadb/*
-	@sudo rm -rf /home/gansard/data/wordpress/*
+	@sudo rm -rf /home/gansard/data/*
 	@docker system prune -af
 
 re: fclean all
 
-.PHONY: all logs clean fclean
+.Phony: all logs clean fclean

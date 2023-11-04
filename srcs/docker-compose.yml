@@ -14,13 +14,8 @@ services:
     networks:
       - inception
     restart: unless-stopped
-    env_file: .env
-    healthcheck:
-      test: mysqladmin ping --host=localhost -p${SQL_ROOT_PASSWORD}
-      interval: 5s
-      timeout: 1s
-      retries: 20
-      start_period: 5s
+    env_file:
+      - .env
 
   wordpress:
     image: wordpress
@@ -35,10 +30,8 @@ services:
     networks:
       - inception
     restart: unless-stopped
-    env_file: .env
-    depends_on:
-      mariadb:
-        condition: service_healthy    
+    env_file:
+      - .env
 
   nginx:
     image: nginx
@@ -55,13 +48,8 @@ services:
     networks:
       - inception
     restart: unless-stopped
-    env_file: .env
-    healthcheck:
-      test: 'curl -kfsSL https://localhost:443/status'
-      interval: 5s
-      timeout: 1s
-      retries: 10
-      start_period: 5s
+    env_file:
+      - .env
 
 volumes:
   mariadb:
