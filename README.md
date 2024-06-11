@@ -1,3 +1,5 @@
+![Ghibli Style Inception (1)](https://github.com/iamgrg/inception/assets/80717523/b436e976-5d16-44e7-bfa6-ff9b28b10f16)
+
 # Inception
 
 ## Overview
