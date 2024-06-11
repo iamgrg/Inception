@@ -47,8 +47,7 @@ Environment variables and other configurations are managed through a .env file f
 
 ## Directory Structure
 
-bash
-```
+```bash
 /
 ├── Makefile
 ├── srcs
