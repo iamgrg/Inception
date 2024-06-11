@@ -19,15 +19,16 @@ make all
 ```
 
 ## Usage
+
 Once the containers are set up, the services can be accessed through the configured domain names and ports as specified in the Docker Compose configuration file.
 
 ## Features
 
-Nginx Container: Configured to handle HTTPS traffic only, serving as the reverse proxy to other services.
-WordPress Container: Runs WordPress with PHP-FPM, without Nginx within the same container.
-MariaDB Container: Provides a MariaDB server for the WordPress database.
-Volumes: Two volumes to persist the WordPress database and files.
-Networking: Custom Docker network to facilitate secure and efficient communication between containers.
+- Nginx Container: Configured to handle HTTPS traffic only, serving as the reverse proxy to other services.
+- WordPress Container: Runs WordPress with PHP-FPM, without Nginx within the same container.
+- MariaDB Container: Provides a MariaDB server for the WordPress database.
+- Volumes: Two volumes to persist the WordPress database and files.
+- Networking: Custom Docker network to facilitate secure and efficient communication between containers.
 
 ## Configuration
 
@@ -36,15 +37,15 @@ Environment variables and other configurations are managed through a .env file f
 
 ## Containers Setup
 
-Nginx: Configured for HTTPS using TLSv1.2 or TLSv1.3.
-WordPress: Integrated with PHP-FPM for dynamic content management.
-MariaDB: Used for database management, isolated from other services for security.
-Security
-HTTPS setup with TLSv1.2 or TLSv1.3.
-Environment variables are used to manage sensitive information, ensuring no sensitive data is hard-coded into Dockerfiles or images.
+- Nginx: Configured for HTTPS using TLSv1.2 or TLSv1.3.
+- WordPress: Integrated with PHP-FPM for dynamic content management.
+- MariaDB: Used for database management, isolated from other services for security.
+
+## Security
+- HTTPS setup with TLSv1.2 or TLSv1.3.
+- Environment variables are used to manage sensitive information, ensuring no sensitive data is hard-coded into Dockerfiles or images.
 
 ## Directory Structure
-An example of the expected directory structure:
 
 bash
 ```
